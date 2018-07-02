@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Components", "BenefitsCalculator.Components\BenefitsCalculator.Components.csproj", "{F40C479D-85F3-4F3A-A12F-4A11643A78B5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F} = {A88E7C49-0152-4E9A-B391-A7995DCEA18F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Data.InMemory", "BenefitsCalculator.Data.InMemory\BenefitsCalculator.Data.InMemory.csproj", "{0C7E750B-3750-4B3F-A622-F4DEA440E51B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F} = {A88E7C49-0152-4E9A-B391-A7995DCEA18F}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.Common", "BenefitsCalculator.Common\BenefitsCalculator.Common.csproj", "{A88E7C49-0152-4E9A-B391-A7995DCEA18F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.WebApi", "BenefitsCalculator.WebApi\BenefitsCalculator.WebApi.csproj", "{CF942FFE-9EDE-44A7-B09F-952900268195}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F40C479D-85F3-4F3A-A12F-4A11643A78B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40C479D-85F3-4F3A-A12F-4A11643A78B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40C479D-85F3-4F3A-A12F-4A11643A78B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40C479D-85F3-4F3A-A12F-4A11643A78B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C7E750B-3750-4B3F-A622-F4DEA440E51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7E750B-3750-4B3F-A622-F4DEA440E51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7E750B-3750-4B3F-A622-F4DEA440E51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7E750B-3750-4B3F-A622-F4DEA440E51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF942FFE-9EDE-44A7-B09F-952900268195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF942FFE-9EDE-44A7-B09F-952900268195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF942FFE-9EDE-44A7-B09F-952900268195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF942FFE-9EDE-44A7-B09F-952900268195}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3198E023-B0A3-4D9E-A238-03ADBDE93C32}
+	EndGlobalSection
+EndGlobal
