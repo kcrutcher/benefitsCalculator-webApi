@@ -22,6 +22,15 @@ namespace BenefitsCalculator.WebApi
         {
             services.AddMvc();
 
+            // TODO lock down this policy
+            services.AddCors(o => o.AddPolicy("OpenPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader()
+                       .AllowCredentials();
+            }));
+
             services.AddTransient<IEmployeeLogic, EmployeeLogic>();
             services.AddTransient<IEmployeeRepository, EmployeeRepository>();
         }
@@ -33,6 +42,8 @@ namespace BenefitsCalculator.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(config => config.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
 
             app.UseMvc();
         }

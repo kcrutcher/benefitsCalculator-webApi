@@ -2,10 +2,12 @@
 using System.Threading.Tasks;
 using BenefitsCalculator.Common.Entities;
 using BenefitsCalculator.Common.Interfaces;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BenefitsCalculator.WebApi.Controllers
 {
+    [EnableCors("OpenPolicy")]
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class EmployeesController : Controller
