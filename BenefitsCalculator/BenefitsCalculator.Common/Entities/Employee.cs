@@ -6,6 +6,10 @@ namespace BenefitsCalculator.Common.Entities
     {
         public List<Person> Dependents { get; } = new List<Person>();
 
+        public Employee()
+        {
+        }
+
         public Employee(int id, string firstName, string lastName, List<Person> dependents)
             : base(id, firstName, lastName)
         {
