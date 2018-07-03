@@ -56,5 +56,42 @@ namespace BenefitsCalculator.WebApi.Controllers
 
             return CreatedAtRoute(NameOfGetById, new { id = employee.Id }, employee);
         }
+
+        // PUT api/values/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody]Employee value)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var existing = await this._employeeLogic.GetItemAsync(id);
+
+            if (existing == null)
+            {
+                return NotFound(id);
+            }
+
+            await this._employeeLogic.UpdateItemAsync(id, value);
+
+            return NoContent();
+        }
+
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var existing = await this._employeeLogic.GetItemAsync(id);
+
+            if (existing == null)
+            {
+                return NotFound(id);
+            }
+
+            await this._employeeLogic.DeleteItemAsync(id);
+
+            return NoContent();
+        }
     }
 }

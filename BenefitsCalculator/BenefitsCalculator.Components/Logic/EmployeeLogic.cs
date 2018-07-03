@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using BenefitsCalculator.Common.Entities;
 using BenefitsCalculator.Common.Interfaces;
@@ -32,6 +30,18 @@ namespace BenefitsCalculator.Components.Logic
             if (employee == null) { throw new ArgumentNullException(nameof(employee)); }
 
             return await this._employeeRepository.AddItemAsync(employee);
+        }
+
+        public async Task<Employee> UpdateItemAsync(int id, Employee employee)
+        {
+            if (employee == null) { throw new ArgumentNullException(nameof(employee)); }
+
+            return await this._employeeRepository.UpdateItemAsync(id, employee);
+        }
+
+        public async Task DeleteItemAsync(int id)
+        {
+            await this._employeeRepository.DeleteItemAsync(id);
         }
     }
 }

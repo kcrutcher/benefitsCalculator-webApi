@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using BenefitsCalculator.Common.Entities;
 using BenefitsCalculator.Common.Interfaces;
@@ -23,7 +22,7 @@ namespace BenefitsCalculator.Data.InMemory.Repositories
             Task add4 = repository.AddItemAsync(new Employee("Maude", "Lebowski"));
             Task add5 = repository.AddItemAsync(new Employee("Arthur", "Sellers", new List<Person> { new Person("Larry", "Sellers") }));
 
-            Task.WaitAll(add1, add2, add3, add4);
+            Task.WaitAll(add1, add2, add3, add4, add5);
         }
 
         public async Task<Employee> GetItemAsync(int id)
@@ -45,6 +44,30 @@ namespace BenefitsCalculator.Data.InMemory.Repositories
             employees.Add(employeeToAdd);
 
             return await Task.FromResult(employeeToAdd);
+        }
+
+        public async Task<Employee> UpdateItemAsync(int id, Employee employee)
+        {
+            var existingEmployee = employees.SingleOrDefault(x => x.Id == employee.Id);
+
+            var indexOfExisting = employees.IndexOf(existingEmployee);
+
+            if (indexOfExisting == -1)
+            {
+                throw new InvalidOperationException($"No matching {nameof(employee)} found with ID {id}");
+            }
+
+            employees[indexOfExisting] = employee;
+
+            return await Task.FromResult(employee);
+        }
+
+        public async Task DeleteItemAsync(int id)
+        {
+            var employeeToRemove = await this.GetItemAsync(id);
+
+            if (employeeToRemove != null)
+                employees.Remove(employeeToRemove);
         }
 
         private static int GetNextEmployeeId()

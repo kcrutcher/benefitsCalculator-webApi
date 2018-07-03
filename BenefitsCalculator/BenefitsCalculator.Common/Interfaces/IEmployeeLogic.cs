@@ -9,5 +9,7 @@ namespace BenefitsCalculator.Common.Interfaces
         Task<Employee> GetItemAsync(int id);
         Task<List<Employee>> GetItemsAsync();
         Task<Employee> AddItemAsync(Employee employee);
+        Task<Employee> UpdateItemAsync(int id, Employee employee);
+        Task DeleteItemAsync(int id);
     }
 }
