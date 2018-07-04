@@ -1,6 +1,7 @@
 ﻿using BenefitsCalculator.Common.Interfaces;
 using BenefitsCalculator.Components.Logic;
 using BenefitsCalculator.Data.InMemory.Repositories;
+using BenefitsCalculator.WebApi.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -44,6 +45,8 @@ namespace BenefitsCalculator.WebApi
             }
 
             app.UseCors(config => config.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
+
+            app.UseMiddleware<ErrorHandlingMiddleware>();
 
             app.UseMvc();
         }
