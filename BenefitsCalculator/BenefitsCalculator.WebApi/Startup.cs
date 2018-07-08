@@ -1,4 +1,5 @@
-﻿using BenefitsCalculator.Common.Interfaces;
+﻿using BenefitsCalculator.Common.Entities.Configuration;
+using BenefitsCalculator.Common.Interfaces;
 using BenefitsCalculator.Components.Logic;
 using BenefitsCalculator.Data.InMemory.Repositories;
 using BenefitsCalculator.WebApi.Middleware;
@@ -34,6 +35,12 @@ namespace BenefitsCalculator.WebApi
 
             services.AddTransient<IEmployeeLogic, EmployeeLogic>();
             services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+            services.AddTransient<IPayrollLogic, PayrollLogic>();
+            services.AddTransient<IBenefitPackageLogic, BenefitPackageLogic>();
+            services.AddTransient<ISalaryLogic, SalaryLogic>();
+            services.AddTransient<IBenefitLogic, BenefitLogic>();
+
+            services.Configure<PayrollSettings>(Configuration.GetSection("PayrollSettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
