@@ -17,6 +17,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.Common",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.WebApi", "BenefitsCalculator.WebApi\BenefitsCalculator.WebApi.csproj", "{CF942FFE-9EDE-44A7-B09F-952900268195}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0F325AB-BBAB-4F72-AB03-5A33557F028A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "Tests\UnitTests\UnitTests.csproj", "{143BB24C-1595-4070-AAEB-CF62A921F928}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A88E7C49-0152-4E9A-B391-A7995DCEA18F} = {A88E7C49-0152-4E9A-B391-A7995DCEA18F}
+		{F40C479D-85F3-4F3A-A12F-4A11643A78B5} = {F40C479D-85F3-4F3A-A12F-4A11643A78B5}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +47,16 @@ Global
 		{CF942FFE-9EDE-44A7-B09F-952900268195}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF942FFE-9EDE-44A7-B09F-952900268195}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF942FFE-9EDE-44A7-B09F-952900268195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{143BB24C-1595-4070-AAEB-CF62A921F928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{143BB24C-1595-4070-AAEB-CF62A921F928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{143BB24C-1595-4070-AAEB-CF62A921F928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{143BB24C-1595-4070-AAEB-CF62A921F928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{143BB24C-1595-4070-AAEB-CF62A921F928} = {F0F325AB-BBAB-4F72-AB03-5A33557F028A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3198E023-B0A3-4D9E-A238-03ADBDE93C32}
