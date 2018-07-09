@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTests
 {
     [TestClass]
-    public class BenefitRuleTests
+    public class BeneficiaryNameDiscountRuleTests
     {
         private BeneficiaryNameDiscountRule _rule;
 
@@ -24,7 +24,7 @@ namespace UnitTests
 
             decimal discount = _rule.DetermineDiscount(benefit);
 
-            Assert.AreEqual(grossBenefitCost * BeneficiaryNameDiscountRule.DiscountAmount, discount);
+            Assert.AreEqual(grossBenefitCost * BeneficiaryNameDiscountRule.DiscountPercent, discount);
         }
 
         [TestMethod]

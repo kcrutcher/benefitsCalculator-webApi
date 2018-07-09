@@ -1,11 +1,12 @@
 ﻿using System;
 using BenefitsCalculator.Common.Entities;
+using BenefitsCalculator.Common.Interfaces;
 
 namespace BenefitsCalculator.Components.Rules
 {
-    public class BeneficiaryNameDiscountRule
+    public class BeneficiaryNameDiscountRule : IBeneficiaryRule
     {
-        public static readonly decimal DiscountAmount = .1m;
+        public static readonly decimal DiscountPercent = .1m;
 
         public decimal DetermineDiscount(Benefit benefit)
         {
@@ -17,7 +18,7 @@ namespace BenefitsCalculator.Components.Rules
                 return 0;
             }
 
-            return benefit.GrossCost * DiscountAmount;
+            return benefit.GrossCost * DiscountPercent;
         }
 
         private static bool EligibleForDiscount(string firstName)
