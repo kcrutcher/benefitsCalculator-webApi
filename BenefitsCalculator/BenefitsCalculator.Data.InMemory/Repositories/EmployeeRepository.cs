@@ -16,13 +16,17 @@ namespace BenefitsCalculator.Data.InMemory.Repositories
         {
             var repository = new EmployeeRepository();
 
-            Task add1 = repository.AddItemAsync(new Employee("Jeffrey", "Lebowski", new List<Person> { new Person("Little", "Lebowski") }));
-            Task add2 = repository.AddItemAsync(new Employee("Walter", "Sobchak"));
-            Task add3 = repository.AddItemAsync(new Employee("Donny", "Kerabatsos"));
-            Task add4 = repository.AddItemAsync(new Employee("Maude", "Lebowski"));
-            Task add5 = repository.AddItemAsync(new Employee("Arthur", "Sellers", new List<Person> { new Person("Larry", "Sellers") }));
+            Task add1 = repository.AddItemAsync(new Employee("Knox", "Harrington"));
+            Task add2 = repository.AddItemAsync(new Employee("Bunny", "Lebowski"));
+            Task add3 = repository.AddItemAsync(new Employee("Jesus", "Quintana"));
+            Task add4 = repository.AddItemAsync(new Employee("Arthur", "Sellers", new List<Person> { new Person("Larry", "Sellers") }));
+            Task add5 = repository.AddItemAsync(new Employee("Maude", "Lebowski"));
+            Task add6 = repository.AddItemAsync(new Employee("Jackie", "Treehorn"));
+            Task add7 = repository.AddItemAsync(new Employee("Donny", "Kerabatsos"));
+            Task add8 = repository.AddItemAsync(new Employee("Walter", "Sobchak"));
+            Task add9 = repository.AddItemAsync(new Employee("Jeffrey", "Lebowski", new List<Person> { new Person("Little", "Lebowski") }));
 
-            Task.WaitAll(add1, add2, add3, add4, add5);
+            Task.WaitAll(add1, add2, add3, add4, add5, add6, add7, add8, add9);
         }
 
         public async Task<Employee> GetItemAsync(int id)
