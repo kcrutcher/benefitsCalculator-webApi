@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.WebApi", "BenefitsCalculator.WebApi\BenefitsCalculator.WebApi.csproj", "{CF942FFE-9EDE-44A7-B09F-952900268195}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Components", "BenefitsCalculator.Components\BenefitsCalculator.Components.csproj", "{F40C479D-85F3-4F3A-A12F-4A11643A78B5}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A88E7C49-0152-4E9A-B391-A7995DCEA18F} = {A88E7C49-0152-4E9A-B391-A7995DCEA18F}
@@ -14,8 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BenefitsCalculator.Data.InM
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.Common", "BenefitsCalculator.Common\BenefitsCalculator.Common.csproj", "{A88E7C49-0152-4E9A-B391-A7995DCEA18F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BenefitsCalculator.WebApi", "BenefitsCalculator.WebApi\BenefitsCalculator.WebApi.csproj", "{CF942FFE-9EDE-44A7-B09F-952900268195}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0F325AB-BBAB-4F72-AB03-5A33557F028A}"
 EndProject
