@@ -41,8 +41,6 @@ namespace BenefitsCalculator.Data.InMemory.Repositories
 
         public async Task<Employee> AddItemAsync(Employee employee)
         {
-            // TODO consider how to handle if ID is supplied
-
             var employeeToAdd = new Employee(GetNextEmployeeId(), employee.FirstName, employee.LastName, employee.Dependents);
 
             employees.Add(employeeToAdd);

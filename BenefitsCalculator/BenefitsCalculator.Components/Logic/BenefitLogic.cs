@@ -19,7 +19,6 @@ namespace BenefitsCalculator.Components.Logic
             benefitCosts.Add(typeof(Person), 500);
         }
 
-        // TODO make this async
         public Benefit GetItem(Person person)
         {
             if (person == null) { throw new ArgumentNullException(nameof(person)); }

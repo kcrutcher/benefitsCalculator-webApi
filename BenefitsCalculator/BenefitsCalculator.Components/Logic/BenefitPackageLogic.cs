@@ -15,7 +15,6 @@ namespace BenefitsCalculator.Components.Logic
             this._benefitLogic = benefitLogic;
         }
 
-        // TODO make this async
         public BenefitPackage GetItem(Employee employee)
         {
             if (employee == null) { throw new ArgumentNullException(nameof(employee)); }

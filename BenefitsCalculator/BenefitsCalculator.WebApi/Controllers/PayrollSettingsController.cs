@@ -10,7 +10,7 @@ namespace BenefitsCalculator.WebApi.Controllers
     [Route("api/[controller]")]
     public class PayrollSettingsController : Controller
     {
-        private IOptions<PayrollSettings> _payrollSettings;
+        private readonly IOptions<PayrollSettings> _payrollSettings;
 
         public PayrollSettingsController(IOptions<PayrollSettings> payrollSettings)
         {
