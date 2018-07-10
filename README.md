@@ -3,6 +3,10 @@
 - Built using Visual Studio 2017 v15.7.4
 - Web API is ASP.Net Core v2.1.1 running on top of .NET Framework v4.7.1
 
+# Deployment details
+
+- CI/CD currently deployed to: http://benefitscalculator-api.azurewebsites.net/api
+
 # Instructions to run
 
 1) Clone the repo
